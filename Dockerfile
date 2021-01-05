@@ -1,9 +1,9 @@
 FROM ubuntu:12.04
 MAINTAINER Christian Lück <christian@lueck.tv>
 
-ADD http://download.opensuse.org/repositories/home:/felfert/Debian_6.0/Release.key /Release.key
+ADD https://download.opensuse.org/repositories/Debian:/debbuild/Debian_7.0/Release.key /Release.key
 RUN cat /Release.key | apt-key add - && \
-    echo "deb http://download.opensuse.org/repositories/home:/felfert/xUbuntu_12.04 ./" >> /etc/apt/sources.list.d/freerdp.list && \
+    echo "deb https://download.opensuse.org/repositories/home:/felfert/xUbuntu_12.04 ./" >> /etc/apt/sources.list.d/freerdp.list && \
     apt-get update && \
     apt-get install -y wsgate
     
